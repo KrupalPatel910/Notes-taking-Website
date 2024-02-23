@@ -42,7 +42,7 @@
                   </li> -->
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" id ="searchTxt" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
@@ -50,9 +50,8 @@
   </nav>
   <div class="container my-3">
     <h2>Welcome To Magic Notes</h2>
-    <div class="card my-3" style ="">
+    <div class="card my-3" style="">
 
-      <!-- <img src="..." class="card-img-top" alt="..."> -->
       <div class="card-body">
 
         <h5 class="card-title">Add a Note</h5>
@@ -65,22 +64,7 @@
     <hr>
     <h2>Your Added Notes</h2>
     <hr>
-    <div id="notes" class="row container-fluid">
-
-      <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
-
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <div class="card-body">
-          <h5 class="card-title">Note</h5>
-          <p class="card-text"></p>
-          <button id="deleteBtn" class="btn btn-primary">Delete Note</button>
-        </div>
-
-      </div>
-
-
-
-
+    <div id="notes" class="row container-fluid"></div>
 
     </div>
   </div>
@@ -95,6 +79,7 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
   <script src="/JS/app.js"></script>
+
 </body>
 
 </html>
