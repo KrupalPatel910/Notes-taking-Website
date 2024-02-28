@@ -17,8 +17,10 @@ addBtn.addEventListener('click', function (e) {
     else {
         notesObj = JSON.parse(notes);
     }
-    notesObj.push({txt:addTxt.value,title:addTtl.value});
-    console.log({txt:addTxt.value,title:addTtl.value},"working")
+    notesObj.push({txt:addTxt.value,
+                   title:addTtl.value
+    });
+    // console.log({txt:addTxt.value,title:addTtl.value},"working")
     localStorage.setItem('notes', JSON.stringify(notesObj));
     addTxt.value = "";
     // console.log(notesObj)
@@ -41,8 +43,8 @@ function showNotes() {
 
       
         <div class="card-body">
-          <h4 class="card-title">Note ${index + 1}</h4>
-          <h5>${element.title}</h5>
+          <h3 class="card-title">Note - ${index + 1}</h3>
+          <h6>Title: ${element.title}</h6>
 
           <p class="card-text">${element.txt}</p>
           <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
