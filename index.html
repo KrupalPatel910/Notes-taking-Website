@@ -11,7 +11,7 @@
 
 <body>
   <!-- ------------------------------------Navbar------------------------------------ -->
-  <nav class="navbar    navbar-expand-lg navbar-dark bg-dark ">
+  <nav class="navbar    navbar-expand-lg navbar-dark   bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">MagicNote</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -77,8 +77,11 @@
     </div>
     </form>
     
-    <hr>
-    <h2>Your Added Notes</h2>
+    <hr><div class="d-flex flex-row justify-content-between">
+      <h2>Your Added Notes</h2>
+    <div id="clear_all_btn"><button id=""onclick="clearNote(this.id)" class="btn btn-primary">Clear All </button> </div>
+      </div>
+    
     <hr>
     <div id="notes" class="row container-fluid"></div>
 

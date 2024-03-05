@@ -82,7 +82,7 @@ function showNotes() {
 
     }
     else {
-        notesElm.innerHTML = `Nothing to show! Use "Add a Note" section above to add notes.`
+        notesElm.innerHTML = `<p>Nothing to show! Use <b>"Add a Note"</b> section above to add notes.</p>`
     }
 
 
@@ -188,4 +188,23 @@ Display.prototype.clear = function () {
     let libraryForm = document.getElementById('libraryForm');
     libraryForm.reset();
 };
+
+// Clear function to remove all book
+
+function clearNote(index) {
+    console.log("i am clearing all notes");
+    let notes = localStorage.getItem('notes');
+    if (notes == null) {
+        notesObj = [];
+    }
+    else {
+        notesObj = JSON.parse(notes);
+    }
+
+    notesObj.splice(index);
+    localStorage.setItem('notes', JSON.stringify(notesObj));
+
+    showNotes()
+}
+
 
