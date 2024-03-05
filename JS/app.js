@@ -118,7 +118,8 @@ search.addEventListener("input", function () {
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function (element) {
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
-        if (cardTxt.toLowerCase().includes(inputVal)) {
+        let cardTxt1 = element.getElementsByTagName("h6")[0].innerText;
+        if (cardTxt.toLowerCase().includes(inputVal) || cardTxt1.toLowerCase().includes(inputVal) ) {
             element.style.display = "block";
         }
         else {
